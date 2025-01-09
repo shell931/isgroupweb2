@@ -35,7 +35,7 @@ key_features:
       title: Diseño e interfaz ui/ux
       content: En nuestro servicio de diseño UI/UX, creamos interfaces intuitivas y visualmente atractivas que no solo destacan, sino que también ofrecen una navegación fluida y una experiencia memorable, Incrementa de la conversión y satisfacción del usuario, Fortalece tu marca con diseños innovadores y consistentes, reducción del abandono gracias a una experiencia fluida y sin fricciones.
     - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Implementaciones AWS
+      title: Cloud AWS
       content: Llevamos su tecnología a la nube, migraciones e implementaciones nuevas.
     - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
       title: Pruebas de competencia
