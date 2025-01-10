@@ -7,7 +7,7 @@ const HomepageTab = ({ homepage_tab: { tab_list, title, description } }) => {
   return (
     <div className="tab gx-5 row items-center">
       <div className="lg:col-7 lg:order-2">
-        <div className="tab-content">
+        <div className="tab-content center-le">
           {tab_list.map((item, index) => (
             <div
               key={index}
@@ -15,7 +15,7 @@ const HomepageTab = ({ homepage_tab: { tab_list, title, description } }) => {
                 tab === index ? "active" : undefined
               }`}
             >
-              <img className="w-full object-contain" src={item.image} />
+              <img className="w-full-70 object-contain" src={item.image} />
             </div>
           ))}
         </div>

@@ -15,31 +15,31 @@ key_features:
   feature_list:
     - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
       title: Consultoría digital
-      content: Identificamos las fallas y conectamos los puntos entre tu negocio y tu estrategia digital. Nuestro equipo experto cuenta con años de experiencia en la definición de estrategias y hojas de ruta en función de tus objetivos específicos.
+      content: Identificamos las falencias y conectamos los puntos clave entre tu modelo de negocio, tu estrategia digital y las oportunidades de crecimiento.
     - icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Evolución de ecosistemas
-      content: Ayudamos a las empresas a evolucionar y ejecutar sus aplicaciones de forma eficiente, desplegando equipos especializados en la modernización y el mantenimiento de ecosistemas técnicos. Creando soluciones robustas en tecnologías de vanguardia.
+      title: Evolución
+      content: Ayudamos a las empresas a escalar y ejecutar sus aplicaciones de forma eficiente, enfocandonos en el mantenimiento de ecosistemas digitales.
     - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Soluciones multiexperiencia
-      content: Deleitamos a las personas usuarias con experiencias interconectadas a través de aplicaciones web, móviles, interfaces conversacionales, digital twin, IoT y AR. Su arquitectura puede adaptarse y evolucionar para adaptarse a los cambios de tu organización.
+      title: Multiexperiencia
+      content: Adaptamos aplicaciones web, móviles, interfaces conversacionales, digital twin, IoT y AR. Su organización puede evolucionar para adaptarse a los nuevos cambios.
     - icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
       title: Soluciones de pago
-      content: Implementaciones basadas en sistemas de pago, permitiendo integraciones debito, credito, entre otros sistemas de pago en la región.
+      content: Desarrollo de implementaciones orientadas a sistemas de pago, facilitando integraciones con tarjetas de débito, crédito y otros métodos de pago ampliamente utilizados en la región.
     - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Consultoria en seguridad
-      content: La seguridad de la información es primordial para tu negocio, contamos con expertos en consultoria asociada a las normas PCI DSS, ISO/IEC 27001.
+      title: Ciberseguridad
+      content: La ciberseguridad es primordial para tu negocio, contamos con expertos en consultoria asociada a las normas PCI DSS, ISO/IEC 27001.
     - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Implementaciones 3DS 
+      title: 3-D Secure
       content: Implementa una solución 3DS para tu sistema de pagos, contamos con personal especializado en este tipo de integraciones.
     - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Diseño e interfaz ui/ux
-      content: En nuestro servicio de diseño UI/UX, creamos interfaces intuitivas y visualmente atractivas que no solo destacan, sino que también ofrecen una navegación fluida y una experiencia memorable, Incrementa de la conversión y satisfacción del usuario, Fortalece tu marca con diseños innovadores y consistentes, reducción del abandono gracias a una experiencia fluida y sin fricciones.
+      title: Diseño UI/UX
+      content: Creamos interfaces intuitivas y visualmente atractivas que se destacan y ofrecen una navegación fluida y una experiencia memorable.
     - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
       title: Cloud AWS
-      content: Llevamos su tecnología a la nube, migraciones e implementaciones nuevas.
-    - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Pruebas de competencia
-      content: Realice pruebas de competencia a sus trabajadores o en la busqueda de personal con nuestro software especializado.
+      content: Llevamos su tecnología a la nube con soluciones personalizadas, abarcando migraciones, nuevas implementaciones y optimización de servicios.
+    # - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
+    #   title: Test de competencia
+    #   content: Realice pruebas de competencia a sus trabajadores o en la busqueda de personal con nuestro software especializado.
 
 #service
 service:
@@ -49,13 +49,13 @@ service:
     tab_list:
         - title: Lenguajes de programación
           icon: "lock" 
-          image: "/images/sells-by-country.png"
+          image: "https://img-app-v1.s3.us-east-1.amazonaws.com/isweb/devlogos.png"
         - title: Cloud Architect
           icon: "clock" 
-          image: "/images/collaboration.png"
-        # - title: Start building with Habitify platform
-        #   icon: "bell"  
-        #   image: "/images/sells-by-country.png"
+          image: "https://img-app-v1.s3.us-east-1.amazonaws.com/isweb/Disen%CC%83o+sin+ti%CC%81tulo.png"
+        - title: Ciberseguridad
+          icon: "bell"  
+          image: "https://img-app-v1.s3.us-east-1.amazonaws.com/isweb/ciberseg.png"
 
   our_service:
     - title: Tecnologías de Desarrollo
@@ -85,7 +85,7 @@ testimonial:
   title: Nuestros clientes tienen cosas buenas que decir sobre nosotros
   # description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
   testimonial_list:
-    - author: David Cameron
+    - author: Interamericana
       avatar: "/images/users/user-5.png"
       organization: meta limited
       rating: four
