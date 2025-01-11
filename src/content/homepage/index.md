@@ -85,26 +85,28 @@ testimonial:
   title: Nuestros clientes tienen cosas buenas que decir sobre nosotros
   # description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
   testimonial_list:
-    - author: Interamericana
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
+    - author: 
+      avatar: "https://img-app-v1.s3.amazonaws.com/img_dashboard/xpay_claro.svg"
+      organization: 
       rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-6.png"
-      organization: meta limited
+      content: Nuestra app movil y plataforma de pagos cuenta con todas las herramientas necesarias para competir en el mercado fintech, gracias a los desarrollos realizados por IS.
+      classima: ima1
+    - author: 
+      avatar: "https://img-app-v1.s3.us-east-1.amazonaws.com/dyner_logo_oscuro.svg"
+      organization: 
       rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
+      content: Contamos con infraestructura y niveles de procesamiento de pagos escalables, ademas innovamos en productos y servicios transaccionales gracias a la ayuda de IS.
+      classima: ima2
+    - author: 
       avatar: "/images/users/user-2.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    # - author: David Cameron
-    #   avatar: "/images/users/user-3.png"
-    #   organization: meta limited
-    #   rating: five
-    #   content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
+      organization: 
+      rating: five
+      content: Organizamos nuestro inventario y procesos de ventas con un software customizado a nuestras necesidades diarias en la compañia, IS logro los objetivos deseados.
+    - author: 
+      avatar: "/images/users/user-3.png"
+      organization: 
+      rating: five
+      content: Nuestra plataforma nos ayuda a mantener inventarios y administrar la planta de producción, ademas la impresión de ordenes de produccion y comprobantes de pago.
     # - author: David Cameron
     #   avatar: "/images/users/user-4.png"
     #   organization: meta limited
