@@ -2,7 +2,8 @@
 banner:
   title: "Innovation Studio, diseñamos y desarrollamos soluciones de software"
   content: "Crea soluciones de software sólidas, ágiles y adaptables a las necesidades de tu negocio."
-  image: /images/banner-img.png
+  # image: /images/banner-img.png
+  image: https://img-app-v1.s3.us-east-1.amazonaws.com/isweb/Documentos_escaneados_page-0001-removebg-preview.png
   button:
     label: Download The Theme
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
@@ -98,7 +99,7 @@ testimonial:
       content: Contamos con infraestructura y niveles de procesamiento de pagos escalables, ademas innovamos en productos y servicios transaccionales gracias a la ayuda de IS.
       classima: ima2
     - author: 
-      avatar: "/images/users/user-2.png"
+      avatar: "https://img-app-v1.s3.us-east-1.amazonaws.com/isweb/Logo1.jpg"
       organization: 
       rating: five
       content: Organizamos nuestro inventario y procesos de ventas con un software customizado a nuestras necesidades diarias en la compañia, IS logro los objetivos deseados.
