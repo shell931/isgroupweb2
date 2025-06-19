@@ -15,8 +15,11 @@ const stars = Array.from({ length: STAR_COUNT }, (_, i) => {
   const delay = Math.random() * 2;
   return { top, left, size, opacity, duration, delay };
 });
-// Delay aleatorio para la estrella fugaz
-const shootingDelay = Math.random() * 6 + 4; // entre 4 y 10 segundos
+
+// Delays aleatorios para las estrellas fugaces
+const shootingDelay1 = Math.random() * 6 + 4; // entre 4 y 10 segundos
+const shootingDelay2 = Math.random() * 8 + 6; // entre 6 y 14 segundos
+const shootingDelay3 = Math.random() * 10 + 8; // entre 8 y 18 segundos
 ---
 <style is:global>
 .stars-random {
@@ -45,20 +48,37 @@ const shootingDelay = Math.random() * 6 + 4; // entre 4 y 10 segundos
 .shooting-star {
   position: absolute;
   top: 50%;
-  left: -10%;
+  right: -10%;
   width: 120px;
   height: 2px;
-  background: linear-gradient(90deg, white, rgba(255,255,255,0));
+  background: linear-gradient(-90deg, rgba(255,255,255,0), white);
   opacity: 0.8;
   filter: blur(1px);
   border-radius: 2px;
   pointer-events: none;
   z-index: 2;
   animation: shooting-horizontal 1.2s linear;
+  animation-delay: var(--shooting-delay, 0s);
 }
+
+.shooting-star.high {
+  top: 30%;
+  width: 150px;
+  height: 2.5px;
+  animation-duration: 1.5s;
+}
+
+.shooting-star.higher {
+  top: 15%;
+  width: 180px;
+  height: 3px;
+  animation-duration: 1.8s;
+  opacity: 0.6;
+}
+
 @keyframes shooting-horizontal {
   0% {
-    left: -10%;
+    right: -10%;
     opacity: 0;
   }
   10% {
@@ -68,11 +88,12 @@ const shootingDelay = Math.random() * 6 + 4; // entre 4 y 10 segundos
     opacity: 1;
   }
   100% {
-    left: 110%;
+    right: 110%;
     opacity: 0;
   }
 }
 </style>
+
 <div class="stars-random" id="stars-area">
   {stars.map(star => (
     <div
@@ -81,17 +102,39 @@ const shootingDelay = Math.random() * 6 + 4; // entre 4 y 10 segundos
     />
   ))}
 </div>
-<script>
+
+<script is:inline define:vars={{ shootingDelay1, shootingDelay2, shootingDelay3 }}>
   window.addEventListener('DOMContentLoaded', () => {
     let area = document.getElementById('stars-area');
-    function createShootingStar() {
+    function createShootingStar(type = '', delay = 0) {
       const star = document.createElement('div');
-      star.className = 'shooting-star';
+      star.className = `shooting-star${type ? ' ' + type : ''}`;
+      star.style.setProperty('--shooting-delay', `${delay}s`);
       area.appendChild(star);
-      setTimeout(() => {
+
+      star.addEventListener('animationend', () => {
         star.remove();
-      }, 1200);
+        // Recrear la estrella con un nuevo delay aleatorio
+        setTimeout(() => {
+          let newDelay;
+          switch(type) {
+            case 'higher':
+              newDelay = Math.random() * 10 + 8; // 8-18s
+              break;
+            case 'high':
+              newDelay = Math.random() * 8 + 6; // 6-14s
+              break;
+            default:
+              newDelay = Math.random() * 6 + 4; // 4-10s
+          }
+          createShootingStar(type, newDelay);
+        }, delay * 1000);
+      });
     }
-    setInterval(createShootingStar, 4000);
+
+    // Iniciar las tres estrellas fugaces con diferentes delays
+    createShootingStar('', shootingDelay1);
+    createShootingStar('high', shootingDelay2);
+    createShootingStar('higher', shootingDelay3);
   });
 </script>

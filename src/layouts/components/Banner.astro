@@ -6,6 +6,27 @@ const { banner } = Astro.props;
 const { title, button, image, content } = banner;
 ---
 
+<style is:global>
+  .mouse-dot {
+    animation: mouse-scroll 1.5s ease-in-out infinite;
+  }
+
+  @keyframes mouse-scroll {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(8px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+
 <section
   id="main-banner"
   class="section banner relative min-h-screen flex flex-col justify-center items-center transition-all duration-700"
@@ -78,7 +99,7 @@ const { title, button, image, content } = banner;
     width={496}
     height={466}
   /> -->
-  <div class="">
+  <div class="absolute left-1/2 bottom-20 -translate-x-1/2 z-20">
     <div class="mouse-indicator">
       <svg width="32" height="54" viewBox="0 0 32 54" fill="none">
         <rect x="1" y="1" width="30" height="52" rx="15" stroke="#c1d2e6" stroke-width="2"/>
@@ -89,7 +110,6 @@ const { title, button, image, content } = banner;
   <script is:inline>
     if (typeof window !== "undefined") {
       const banner = document.getElementById("main-banner");
-      // const mouseIndicator = document.querySelector('.mouse-indicator');
       window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
         const maxScroll = 120;
@@ -97,9 +117,8 @@ const { title, button, image, content } = banner;
         banner.style.opacity = 1 - progress * 0.7;
         banner.style.transform = `scale(${1 - progress * 0.15}) translateY(-${progress * 30}px)`;
         const minRadius = 0;
-        const maxRadius = 48; // px
+        const maxRadius = 48;
         banner.style.borderRadius = `${minRadius + progress * maxRadius}px`;
-        // El indicador de scroll ya no se oculta al hacer scroll
       });
     }
   </script>
