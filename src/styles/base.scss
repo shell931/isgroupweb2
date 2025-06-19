@@ -77,3 +77,34 @@ h6,
 .h6 {
   @apply text-h6;
 }
+
+/* Efecto shrink para el banner al hacer scroll */
+.banner-shrink {
+  min-height: 80px !important;
+  padding-top: 0.5rem !important;
+  background: #000 !important;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
+  opacity: 0.98;
+  transition: all 0.10s ease-in-out;
+}
+.banner-shrink .banner-title {
+  font-size: 1.5rem !important;
+  transition: font-size 0.10s ease-in-out;
+}
+
+.mouse-indicator {
+  width: 32px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.mouse-dot {
+  animation: mouse-scroll 1.2s infinite cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes mouse-scroll {
+  0% { opacity: 1; cy: 14; }
+  50% { opacity: 0.5; cy: 28; }
+  100% { opacity: 1; cy: 14; }
+}

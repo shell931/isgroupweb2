@@ -44,6 +44,9 @@ key_features:
 
 #service
 service:
+  service_list:
+    title: algo
+    central_image: "/images/pulpo.png"
   homepage_tab:
     title: Tecnologías de Desarrollo
     description: Desarrollamos soluciones en diferentes tecnologías y lenguajes de programación.

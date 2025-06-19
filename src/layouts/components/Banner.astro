@@ -7,22 +7,25 @@ const { title, button, image, content } = banner;
 ---
 
 <section
-  class="section banner relative min-h-[656px] flex flex-col justify-start items-center pt-24"
-  style="background: #000;"
+  id="main-banner"
+  class="section banner relative min-h-screen flex flex-col justify-center items-center transition-all duration-700"
+  style="background: #000; overflow: hidden;"
 >
   {/** Estrellas aleatorias */}
   <Stars />
   <div class="banner-fade-bottom"></div>
   <div class="container relative z-10">
     <div class="w-full flex flex-col items-center text-center">
-      <h1
-        class="banner-title"
-        style="color:#c1d2e694; font-size:3rem;"
-        set:html={markdownify(title)}
-      />
+      <div class="max-w-3xl w-full mx-auto">
+        <h1
+          class="banner-title text-center transition-all duration-700 text-2xl sm:text-3xl md:text-4xl lg:text-6xl"
+          style="color:#c1d2e694;"
+          set:html={markdownify(title)}
+        />
+      </div>
       <p
-        class="mt-6 banner-title-content"
-        style="color:#c1d2e694; font-size: 1.2rem; font-weight: 200;"
+        class="mt-6 banner-title-content text-base sm:text-lg md:text-xl lg:text-2xl font-extralight"
+        style="color:#c1d2e694;"
         set:html={markdownify(content)}
       />
       {
@@ -75,4 +78,29 @@ const { title, button, image, content } = banner;
     width={496}
     height={466}
   /> -->
+  <div class="">
+    <div class="mouse-indicator">
+      <svg width="32" height="54" viewBox="0 0 32 54" fill="none">
+        <rect x="1" y="1" width="30" height="52" rx="15" stroke="#c1d2e6" stroke-width="2"/>
+        <circle class="mouse-dot" cx="16" cy="14" r="3" fill="#c1d2e6"/>
+      </svg>
+    </div>
+  </div>
+  <script is:inline>
+    if (typeof window !== "undefined") {
+      const banner = document.getElementById("main-banner");
+      // const mouseIndicator = document.querySelector('.mouse-indicator');
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const maxScroll = 120;
+        const progress = Math.min(scrollY / maxScroll, 1);
+        banner.style.opacity = 1 - progress * 0.7;
+        banner.style.transform = `scale(${1 - progress * 0.15}) translateY(-${progress * 30}px)`;
+        const minRadius = 0;
+        const maxRadius = 48; // px
+        banner.style.borderRadius = `${minRadius + progress * maxRadius}px`;
+        // El indicador de scroll ya no se oculta al hacer scroll
+      });
+    }
+  </script>
 </section>
