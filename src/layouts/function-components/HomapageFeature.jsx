@@ -9,11 +9,11 @@ const HomapageFeature = ({ feature_list }) => {
         return (
           <div
             key={i}
-            className="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            className="flex flex-col justify-between rounded-3xl bg-black/30 p-5 shadow-lg backdrop-blur-md border border-white/10 text-white"
           >
             <div>
-              <h3 className="h4 text-xl lg:text-2xl">{item.title}</h3>
-              <p>{item.content}</p>
+              <h3 className="h4 text-xl lg:text-2xl text-white">{item.title}</h3>
+              <p className="text-white font-extralight">{item.content}</p>
             </div>
             <span className="icon mt-4">
               <FeatherIcon />

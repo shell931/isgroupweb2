@@ -1,0 +1,97 @@
+---
+// Componente de estrellas aleatorias para el banner
+const STAR_COUNT = 150;
+const stars = Array.from({ length: STAR_COUNT }, (_, i) => {
+  // Posición aleatoria en % (para cubrir todo el banner)
+  const top = Math.random() * 100;
+  const left = Math.random() * 100;
+  // Tamaño aleatorio entre 1px y 3px
+  const size = 1 + Math.random() * 2;
+  // Opacidad aleatoria entre 0.3 y 1
+  const opacity = 0.3 + Math.random() * 0.7;
+  // Duración de parpadeo aleatoria entre 2s y 4s
+  const duration = 2 + Math.random() * 2;
+  // Retardo aleatorio para que no parpadeen igual
+  const delay = Math.random() * 2;
+  return { top, left, size, opacity, duration, delay };
+});
+// Delay aleatorio para la estrella fugaz
+const shootingDelay = Math.random() * 6 + 4; // entre 4 y 10 segundos
+---
+<style is:global>
+.stars-random {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 6px 2px rgba(255,255,255,0.15);
+  will-change: opacity;
+  animation-name: blink-star;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes blink-star {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+.shooting-star {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, white, rgba(255,255,255,0));
+  opacity: 0.8;
+  filter: blur(1px);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 2;
+  animation: shooting-horizontal 1.2s linear;
+}
+@keyframes shooting-horizontal {
+  0% {
+    left: -10%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+</style>
+<div class="stars-random" id="stars-area">
+  {stars.map(star => (
+    <div
+      class="star"
+      style={`top:${star.top}%;left:${star.left}%;width:${star.size}px;height:${star.size}px;opacity:${star.opacity};animation-duration:${star.duration}s;animation-delay:${star.delay}s;`}
+    />
+  ))}
+</div>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    let area = document.getElementById('stars-area');
+    function createShootingStar() {
+      const star = document.createElement('div');
+      star.className = 'shooting-star';
+      area.appendChild(star);
+      setTimeout(() => {
+        star.remove();
+      }, 1200);
+    }
+    setInterval(createShootingStar, 4000);
+  });
+</script>

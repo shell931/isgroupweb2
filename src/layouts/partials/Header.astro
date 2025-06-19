@@ -60,7 +60,7 @@ const { pathname } = Astro.url;
             {menu.hasChildren ? (
               <li class="nav-item nav-dropdown group relative cursor-pointer  dropdown-button">
                 <span
-                  class={`nav-link inline-flex items-center ${
+                  class={`nav-link inline-flex items-center text-white ${
                     menu.children?.map(({ url }) => url).includes(pathname) ||
                     menu.children
                       ?.map(({ url }) => `${url}/`)
@@ -98,7 +98,7 @@ const { pathname } = Astro.url;
               <li class="nav-item">
                 <a
                   href={menu.url}
-                  class={`nav-link inline-block lg:block ${
+                  class={`nav-link inline-block lg:block text-white ${
                     (pathname === `${menu.url}/` || pathname === menu.url) &&
                     "active"
                   }`}

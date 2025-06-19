@@ -5,7 +5,7 @@ banner:
   # image: /images/banner-img.png
   image: https://img-app-v1.s3.us-east-1.amazonaws.com/isweb/Documentos_escaneados_page-0001-removebg-preview.png
   button:
-    label: Download The Theme
+    label: Contacto
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
 
