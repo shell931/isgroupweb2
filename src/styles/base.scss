@@ -45,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-secondary font-bold leading-tight text-dark;
+  @apply mb-4 font-secondary font-bold leading-tight text-dark dark:text-white;
 }
 
 h1,
@@ -107,4 +107,8 @@ h6,
   0% { opacity: 1; cy: 14; }
   50% { opacity: 0.5; cy: 28; }
   100% { opacity: 1; cy: 14; }
+}
+
+main {
+  @apply relative;
 }

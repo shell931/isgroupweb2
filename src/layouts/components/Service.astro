@@ -12,7 +12,7 @@ const { homepage_tab, our_service = [], service_list } = service || {};
     {service_list && service_list.title && (
       <div class="gx-5 row mt-12 items-center lg:mt-0">
         <div class="lg:col-12 flex justify-center">
-          <h2 class="lg:text-4xl text-center mb-8">{service_list.title}</h2>
+          {/* <h2 class="lg:text-4xl text-center mb-8">{service_list.title}</h2> */}
           <Image
             class="w-[30%] object-contain"
             alt="service"
@@ -24,8 +24,8 @@ const { homepage_tab, our_service = [], service_list } = service || {};
       </div>
     )}
 
-    {homepage_tab && <HomepageTab client:load homepage_tab={homepage_tab} />}
-    {our_service && our_service.length > 0 && our_service.map((item: any, index: number) => (
+    <!-- {homepage_tab && <HomepageTab client:load homepage_tab={homepage_tab} />} -->
+    <!-- {our_service && our_service.length > 0 && our_service.map((item: any, index: number) => (
       <div class="gx-5 row mt-12 items-center lg:mt-0">
         <div class={`lg:col-7 ${index % 2 === 0 ? "order-0" : "order-1"}`}>
           {item.image && (
@@ -85,6 +85,6 @@ const { homepage_tab, our_service = [], service_list } = service || {};
           </div>
         </div>
       </div>
-    ))}
+    ))} -->
   </div>
 </section>
