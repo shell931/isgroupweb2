@@ -62,10 +62,14 @@ service:
           image: "https://img-app-v1.s3.us-east-1.amazonaws.com/isweb/ciberseg.png"
 
   our_service:
-    - title: Tecnologías de Desarrollo
-      desctiption: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed
-      subdesc: Desarrollamos soluciones en diferentes tecnologías y lenguajes de programación.
-      image: "/images/collaboration.png"
+    - title: Ciberseguridad
+      description: Protegemos tus activos digitales con consultoría experta en normativas como PCI DSS e ISO/IEC 27001.
+    - title: Soluciones de Pago
+      description: Integramos pasarelas de pago y sistemas transaccionales, incluyendo especialización en protocolos como 3-D Secure.
+    - title: Diseño UI/UX
+      description: Creamos interfaces de usuario atractivas y funcionales que garantizan una experiencia de usuario memorable.
+    - title: Aplicaciones Móviles
+      description: Desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android, enfocadas en el rendimiento y la usabilidad.
 
     # - title: Accept payments any country in this whole universe
     #   desctiption: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed
